@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="18122" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="18022"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="HealthApp_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="135" height="101" alignment="left" id="BeG-XX-ijT">
+                            <items>
+                                <label width="46" height="46" alignment="right" verticalAlignment="center" text="BPM" textAlignment="left" id="KeO-El-EJM"/>
+                                <imageView width="65" height="63" alignment="left" verticalAlignment="center" image="heart.fill" catalog="system" animationDuration="1" id="jcI-vs-wkz">
+                                    <color key="tintColor" red="0.60644412039999995" green="0.11065364630000001" blue="0.1215436682" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </imageView>
+                            </items>
+                        </group>
+                        <group width="126" height="45" alignment="center" verticalAlignment="bottom" id="g2r-TP-qk4">
+                            <items>
+                                <button width="115" height="39" alignment="center" verticalAlignment="bottom" title="Start" id="9se-xM-B4f">
+                                    <connections>
+                                        <action selector="startButtonTapped" destination="AgC-eL-Hgc" id="SyR-Rf-5Fe"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="bpmLabel" destination="KeO-El-EJM" id="Rkk-m8-WFY"/>
+                        <outlet property="heartImage" destination="jcI-vs-wkz" id="4b5-KG-egS"/>
+                        <outlet property="startStopButton" destination="9se-xM-B4f" id="Wkt-yj-XXc"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="417" y="204"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="heart.fill" catalog="system" width="128" height="105"/>
+    </resources>
+</document>
